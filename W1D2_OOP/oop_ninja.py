@@ -3,14 +3,13 @@ class Ninja:
     list_of_ninjas = []
 
     # Constructor
-    def __init__(self, name: str, weapon, age, health, belt, strength):
+    def __init__(self, data):
         # Attributes
-        self.name = name
-        self.weapon = weapon
-        self.age = age
-        self.health = health
-        self.belt = belt
-        self.strength = strength
+        self.name = data["name"]
+        self.age = data["age"]
+        self.health = data["health"]
+        self.belt = data["belt"]
+        self.strength = data["strength"]
         Ninja.list_of_ninjas.append(self)
 
     # def __repr__(self):
@@ -49,20 +48,33 @@ class Ninja:
         return is_valid
 
 
+# create another class weapon
+
+
+class Weapon:
+    def __init__(self):
+        self.name = "punches"
+        self.damage = 25
+
+
+data = {"name": "Donatelo", "age": 18, "health": 1000, "belt": "blue", "strength": 25}
+data_v = {"name": "Shredder", "age": 18, "health": 1000, "belt": "blue", "strength": 25}
 # Create an Instance
-ninja1 = Ninja("Donatelo", "Bo Stuff", 18, 1000, "Blue", 90)
-villain = Ninja("Shredder", "Armor", 5, 2000, "Black", 990)
-# print(ninja1)
+ninja1 = Ninja(data)
+villain = Ninja(data_v)
+
+print(ninja1.name)
+print(villain.name)
+# print(ninja1.weapon.damage)
 # villain.display_stats()
-# # ninja1.eat_pizza()
+# ninja1.eat_pizza()
 # print("=" * 30)
 # ninja1.attack(villain)
-# # ninja1.attack(villain)
-# # ninja1.attack(villain)
+# ninja1.attack(villain)
+# ninja1.attack(villain)
 # print("=" * 30)
 # villain.display_stats()
 
-# print(Ninja.list_of_ninjas)
 
 # villain.display_stats()
 # ninja1.display_stats()
@@ -72,8 +84,8 @@ villain = Ninja("Shredder", "Armor", 5, 2000, "Black", 990)
 # print("=" * 30)
 # villain.display_stats()
 
-print(Ninja.check_age(villain.age))
-
+# print(Ninja.check_age(villain.age))
+# Ninja.party()
 
 # / Classmethod
 """"

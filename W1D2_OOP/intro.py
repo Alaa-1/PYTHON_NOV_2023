@@ -41,8 +41,8 @@ class Dog:
 yourDog = Dog("Bobby", 6, "unknown", "Golden")
 dog2 = Dog("Marshal", 1, "Golden Retriever", "Golden")
 
-print(yourDog.name)
-print(dog2.name)
+print(yourDog.name)  # Bobby
+print(dog2.name)  # Marshal
 yourDog.bark()
 dog2.bark()
 
