@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <style>
+    p{
+      background-color: {{color}};
+    }
+  </style>
+</head>
+<body>
+  <h1>Products List:</h1>
+  <!-- {{products_list}} -->
+  {% for one_item in products_list:%}
+  {% if one_item | length > 2: %}
+    <p>{{one_item}}</p>
+  {% endif %}
+  <!-- <li>{{one_item}}</li> -->
+  {% endfor %}
+  <hr>
+
+  {% for student in students: %}
+  {% if student.name | lower == name  %}
+  <p>{{student.email}}</p>
+  {% endif %}
+  
+  {% endfor %}
+</body>
+</html>
