@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <!-- based on the folder structure on the right -->
+<!-- linking a css style sheet -->
+<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/my_style.css') }}"> -->
+<!-- linking a javascript file -->
+<!-- <script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script> -->
+</head>
+<body>
+  <div class="container">
+    <h1>It's working 🎉🙌</h1>
+    <hr>
+    <!-- linking an image -->
+    <img src="{{ url_for('static', filename='images/working.jpg') }}">
+
+  </div>
+</body>
+</html>
