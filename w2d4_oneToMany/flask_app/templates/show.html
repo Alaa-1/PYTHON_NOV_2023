@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+<h1>About {{user.first_name}}</h1>
+<a href="/">🏠 HOME</a>
+<hr>
+    <ul>
+        <li><strong>First Name:</strong> {{user.first_name}}</li>
+        <li><strong>Last Name:</strong> {{user.last_name}}</li>
+        <li><strong>Email:</strong> {{user.email}}</li>
+
+        {% for one_quote in user.all_quotes %}
+         <p>{{one_quote.quote_body}}</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>

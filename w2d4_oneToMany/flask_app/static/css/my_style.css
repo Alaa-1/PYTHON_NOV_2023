@@ -1,0 +1,25 @@
+.wrapper{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+blockquote {
+  margin: 0;
+  box-sizing: content-box;
+  width: 200px;
+}
+
+blockquote p {
+  padding: 15px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: '\201C';
+}
+
+blockquote p::after {
+  content: '\201D';
+}
+
